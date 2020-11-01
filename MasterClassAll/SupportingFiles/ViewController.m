@@ -25,7 +25,7 @@
     if(!_sectionOfChapter) {
         _sectionOfChapter = @[
             @[@"BaseUIAndScrollViewVC", @"SeperatePageVC"],
-            @[@"AutoLayoutAndTableViewVC"]
+            @[@"AutoLayoutAndTableViewVC", @"LolHeroInfoVC"]
         ];
     }
     return _sectionOfChapter;

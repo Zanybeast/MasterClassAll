@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,21 +10,101 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeperatePageVC">
             <connections>
+                <outlet property="pageControl" destination="seR-hX-vaz" id="edA-RS-iJZ"/>
+                <outlet property="scrollView" destination="gDG-jn-mvP" id="go2-Aw-0Km"/>
+                <outlet property="stackView" destination="xTL-EI-2lc" id="fsR-D5-m8N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="zzview" destination="a8m-1b-pVz" id="jFd-zm-mGW"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zh-DC-KwR">
+                    <rect key="frame" x="87" y="384" width="240" height="128"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-jn-mvP">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <viewLayoutGuide key="contentLayoutGuide" id="2og-LM-i6Q"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="vrr-xG-hij"/>
+                        </scrollView>
+                        <pageControl opaque="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="seR-hX-vaz">
+                            <rect key="frame" x="190.5" y="113" width="44.5" height="10"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="q4o-Hh-8Hz"/>
+                            </constraints>
+                            <color key="pageIndicatorTintColor" systemColor="systemGray6Color"/>
+                            <color key="currentPageIndicatorTintColor" systemColor="systemGreenColor"/>
+                        </pageControl>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="EoW-fv-23V"/>
+                        <constraint firstAttribute="bottom" secondItem="seR-hX-vaz" secondAttribute="bottom" constant="5" id="KSy-H2-d3h"/>
+                        <constraint firstAttribute="height" constant="128" id="TEm-xb-PgG"/>
+                        <constraint firstAttribute="trailing" secondItem="seR-hX-vaz" secondAttribute="trailing" constant="5" id="cYS-4R-N8G"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xTL-EI-2lc">
+                    <rect key="frame" x="0.0" y="552" width="414" height="290"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyV-NF-JcR" customClass="ZZLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8m-1b-pVz" customClass="ZZView">
+                            <rect key="frame" x="0.0" y="145" width="414" height="145"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQl-z4-5oM">
+                    <rect key="frame" x="87" y="314" width="71" height="30"/>
+                    <state key="normal" title="ScrollAuto"/>
+                    <connections>
+                        <action selector="scrollAuto:" destination="-1" eventType="touchUpInside" id="iXI-yY-370"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKm-F6-L0D">
+                    <rect key="frame" x="258" y="314" width="57" height="30"/>
+                    <state key="normal" title="NotAuto"/>
+                    <connections>
+                        <action selector="notAutoScroll:" destination="-1" eventType="touchUpInside" id="6bI-NY-NyJ"/>
+                    </connections>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <color key="backgroundColor" systemColor="systemTealColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="xTL-EI-2lc" secondAttribute="trailing" id="55X-fa-i8E"/>
+                <constraint firstItem="2zh-DC-KwR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7TV-Ec-cQg"/>
+                <constraint firstItem="xTL-EI-2lc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="8rg-ut-GeN"/>
+                <constraint firstItem="xTL-EI-2lc" firstAttribute="top" secondItem="2zh-DC-KwR" secondAttribute="bottom" constant="40" id="D8F-Lt-dy5"/>
+                <constraint firstItem="2zh-DC-KwR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MVe-xs-Qy8"/>
+                <constraint firstItem="kKm-F6-L0D" firstAttribute="leading" secondItem="LQl-z4-5oM" secondAttribute="trailing" constant="100" id="PXr-fe-PKm"/>
+                <constraint firstItem="2zh-DC-KwR" firstAttribute="top" secondItem="LQl-z4-5oM" secondAttribute="bottom" constant="40" id="UOw-6v-UGf"/>
+                <constraint firstItem="kKm-F6-L0D" firstAttribute="centerY" secondItem="LQl-z4-5oM" secondAttribute="centerY" id="mDh-HZ-cYN"/>
+                <constraint firstItem="2zh-DC-KwR" firstAttribute="leading" secondItem="LQl-z4-5oM" secondAttribute="leading" id="obC-ah-v2t"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="xTL-EI-2lc" secondAttribute="bottom" constant="20" id="rHY-l0-RyL"/>
+            </constraints>
             <point key="canvasLocation" x="-265" y="89"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
