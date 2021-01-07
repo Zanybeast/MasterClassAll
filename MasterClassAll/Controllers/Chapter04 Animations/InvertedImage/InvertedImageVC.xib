@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvertedImageVC">
+            <connections>
+                <outlet property="replView" destination="0MD-sh-5mQ" id="Wv3-zk-9DK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0MD-sh-5mQ" customClass="ReplView">
+                    <rect key="frame" x="97" y="164" width="220" height="220"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kawaii" translatesAutoresizingMaskIntoConstraints="NO" id="8Vy-DV-eNO">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="8Vy-DV-eNO" secondAttribute="bottom" id="7ad-GG-kbD"/>
+                        <constraint firstItem="8Vy-DV-eNO" firstAttribute="leading" secondItem="0MD-sh-5mQ" secondAttribute="leading" id="Fjk-Z4-Aby"/>
+                        <constraint firstAttribute="trailing" secondItem="8Vy-DV-eNO" secondAttribute="trailing" id="vCk-lT-nQb"/>
+                        <constraint firstItem="8Vy-DV-eNO" firstAttribute="top" secondItem="0MD-sh-5mQ" secondAttribute="top" id="z8d-de-mA0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" red="1" green="0.71339711291051133" blue="0.90370045506627228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0MD-sh-5mQ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="120" id="XMS-2N-ciy"/>
+                <constraint firstItem="0MD-sh-5mQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qUB-Td-kt9"/>
+            </constraints>
+            <point key="canvasLocation" x="-62.318840579710148" y="71.651785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kawaii" width="220" height="220"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

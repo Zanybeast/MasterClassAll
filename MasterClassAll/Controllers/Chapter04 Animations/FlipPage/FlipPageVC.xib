@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlipPageVC">
+            <connections>
+                <outlet property="imageView" destination="rbd-bE-Zb8" id="E7t-Vc-M48"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flipPage_1" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-bE-Zb8">
+                    <rect key="frame" x="117" y="328" width="180" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="I2p-p6-L2J"/>
+                        <constraint firstAttribute="height" constant="240" id="cIR-HV-qz8"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrC-Sm-DfB">
+                    <rect key="frame" x="117" y="608" width="180" height="60"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="MkX-Ss-yKF"/>
+                        <constraint firstAttribute="width" constant="180" id="wbA-rO-HVR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Click To Flip Page">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="flipPage:" destination="-1" eventType="touchUpInside" id="F9m-gY-hXC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rrC-Sm-DfB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2ho-ZJ-HWt"/>
+                <constraint firstItem="rbd-bE-Zb8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Hvx-j1-grW"/>
+                <constraint firstItem="rbd-bE-Zb8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eRg-0P-WGE"/>
+                <constraint firstItem="rrC-Sm-DfB" firstAttribute="top" secondItem="rbd-bE-Zb8" secondAttribute="bottom" constant="40" id="log-Py-THA"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="86"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="flipPage_1" width="320" height="480"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

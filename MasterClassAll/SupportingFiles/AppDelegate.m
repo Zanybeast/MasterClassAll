@@ -17,8 +17,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
 //    [NSThread sleepForTimeInterval:2.0];
+    [self getFilePath];
     
     return YES;
+}
+
+- (void)getFilePath {
+    NSArray *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = documents[0];
+    ZLog(@"%@", documentPath);
 }
 
 

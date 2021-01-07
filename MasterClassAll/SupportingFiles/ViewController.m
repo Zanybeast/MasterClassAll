@@ -15,20 +15,31 @@
 @property (weak, nonatomic) IBOutlet UIImageView *hintImageView;
 
 @property(nonatomic, strong) NSArray* sectionOfChapter;
+@property (nonatomic, strong) NSArray* chapterTitle;
 
 
 @end
 
 @implementation ViewController
 
+- (BOOL)prefersStatusBarHidden {
+    return NO;
+}
+
 - (NSArray *)sectionOfChapter {
     if(!_sectionOfChapter) {
-        _sectionOfChapter = @[
-            @[@"BaseUIAndScrollViewVC", @"SeperatePageVC"],
-            @[@"AutoLayoutAndTableViewVC", @"LolHeroInfoVC"]
-        ];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"chapterContent" ofType:@"plist"];
+        _sectionOfChapter = [NSArray arrayWithContentsOfFile:path];
     }
     return _sectionOfChapter;
+}
+
+- (NSArray *)chapterTitle {
+    if (_chapterTitle == nil) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"chapters" ofType:@"plist"];
+        _chapterTitle = [NSArray arrayWithContentsOfFile:path];
+    }
+    return _chapterTitle;
 }
 
 - (void)viewDidLoad {
@@ -37,15 +48,6 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"TitleCell" bundle:nil] forCellReuseIdentifier:@"TitleCell"];
     
 }
-
-#pragma mark - Dark Mode Adjustment
-//- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
-//    if ([self.traitCollection userInterfaceStyle] == UIUserInterfaceStyleDark) {
-//        self.hintImageView.image = [UIImage imageNamed:@"SelectAChapterDark"];
-//    } else if ([self.traitCollection userInterfaceStyle] == UIUserInterfaceStyleLight) {
-//        self.hintImageView.image = [UIImage imageNamed:@"SelectAChapter"];
-//    }
-//}
 
 #pragma mark - UITableView DataSource And Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -56,8 +58,10 @@
     
     TitleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TitleCell" forIndexPath:indexPath];
     
-    NSString *title = [NSString stringWithFormat:@"Chapter%li", indexPath.row + 1];
-    cell.titleStr = title;
+    NSString *title = self.chapterTitle[indexPath.row];
+    
+    NSString *titleStr = [NSString stringWithFormat:@"Chapter%li: %@", indexPath.row + 1, title];
+    cell.titleStr = titleStr;
     
     return cell;
 }

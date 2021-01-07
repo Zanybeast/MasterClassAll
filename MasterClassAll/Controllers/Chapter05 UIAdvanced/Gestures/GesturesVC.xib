@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GesturesVC">
+            <connections>
+                <outlet property="imageView" destination="62z-eT-9xa" id="Zye-Yd-F1y"/>
+                <outlet property="tappedLabel" destination="lWK-oH-G9s" id="92O-pr-WPa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tapped!!!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWK-oH-G9s">
+                    <rect key="frame" x="127.5" y="430.5" width="159" height="35"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beauty01" translatesAutoresizingMaskIntoConstraints="NO" id="62z-eT-9xa">
+                    <rect key="frame" x="20" y="124" width="374" height="718"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC6-jM-izi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <color key="backgroundColor" red="0.25328464160500219" green="0.17499770628095035" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="jwh-83-LgG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="复  原">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="setToDefault:" destination="-1" eventType="touchUpInside" id="Act-eQ-IeN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="62z-eT-9xa" secondAttribute="trailing" constant="20" id="A3A-cr-yTw"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="LC6-jM-izi" secondAttribute="trailing" id="B8O-hK-Vdj"/>
+                <constraint firstItem="LC6-jM-izi" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="DGN-Mc-Jfg"/>
+                <constraint firstItem="lWK-oH-G9s" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GJD-nu-aM0"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="62z-eT-9xa" secondAttribute="bottom" constant="20" id="QTT-AL-WBc"/>
+                <constraint firstItem="62z-eT-9xa" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="eTw-7h-YgA"/>
+                <constraint firstItem="62z-eT-9xa" firstAttribute="top" secondItem="LC6-jM-izi" secondAttribute="bottom" constant="20" id="hFJ-kl-dRG"/>
+                <constraint firstItem="lWK-oH-G9s" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m4W-JK-blS"/>
+                <constraint firstItem="LC6-jM-izi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="qES-TI-7Ia"/>
+            </constraints>
+            <point key="canvasLocation" x="-68" y="50"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="beauty01" width="270" height="480"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

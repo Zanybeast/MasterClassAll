@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransformVC">
+            <connections>
+                <outlet property="customView" destination="UNe-AM-wnz" id="35C-o6-NMs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNe-AM-wnz">
+                    <rect key="frame" x="107" y="84" width="200" height="200"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDZ-Ri-Jcl">
+                            <rect key="frame" x="97.5" y="0.0" width="5" height="79.5"/>
+                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="5" id="clw-1l-tM7"/>
+                            </constraints>
+                        </view>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Idx-Ac-8Pw">
+                            <rect key="frame" x="75.5" y="84.5" width="51" height="31"/>
+                        </switch>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstItem="dDZ-Ri-Jcl" firstAttribute="centerX" secondItem="UNe-AM-wnz" secondAttribute="centerX" id="620-x0-97N"/>
+                        <constraint firstItem="Idx-Ac-8Pw" firstAttribute="centerY" secondItem="UNe-AM-wnz" secondAttribute="centerY" id="8MN-Xo-aNs"/>
+                        <constraint firstAttribute="width" constant="200" id="NSy-Lk-S3Z"/>
+                        <constraint firstItem="dDZ-Ri-Jcl" firstAttribute="top" secondItem="UNe-AM-wnz" secondAttribute="top" id="ZCJ-Ww-AyF"/>
+                        <constraint firstAttribute="height" constant="200" id="n6N-MO-Hcc"/>
+                        <constraint firstItem="Idx-Ac-8Pw" firstAttribute="top" secondItem="dDZ-Ri-Jcl" secondAttribute="bottom" constant="5" id="yC6-YB-ZDc"/>
+                        <constraint firstItem="Idx-Ac-8Pw" firstAttribute="centerX" secondItem="UNe-AM-wnz" secondAttribute="centerX" id="zMN-8e-LjV"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hvQ-Gd-pjA">
+                    <rect key="frame" x="40" y="359" width="334" height="483"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-1A-Yhz">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="88.5"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="Transform_quarter_π">
+                                <color key="titleColor" systemColor="systemIndigoColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="transform_M_PI_4:" destination="-1" eventType="touchUpInside" id="pu3-eH-dS4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9h-dk-HSs">
+                            <rect key="frame" x="0.0" y="98.5" width="334" height="88.5"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="Transform_autoRotate">
+                                <color key="titleColor" systemColor="systemIndigoColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="transformAutoRotate:" destination="-1" eventType="touchUpInside" id="vPv-KQ-VSd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRw-kj-DEo">
+                            <rect key="frame" x="0.0" y="197" width="334" height="89"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="Transform_stopAutoRotate">
+                                <color key="titleColor" systemColor="systemIndigoColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="transformStopAutoRotate:" destination="-1" eventType="touchUpInside" id="G6F-ip-baH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-4p-3na">
+                            <rect key="frame" x="0.0" y="296" width="334" height="88.5"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="Transform_makeTranslation">
+                                <color key="titleColor" systemColor="systemIndigoColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="transform_makeTranslation:" destination="-1" eventType="touchUpInside" id="Zcn-7k-q1t"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIg-mJ-jxw">
+                            <rect key="frame" x="0.0" y="394.5" width="334" height="88.5"/>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <state key="normal" title="Transform_makeScale">
+                                <color key="titleColor" systemColor="systemIndigoColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="transform_makeScale:" destination="-1" eventType="touchUpInside" id="ZGV-IX-eG9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="UNe-AM-wnz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JOS-Qr-JLI"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="hvQ-Gd-pjA" secondAttribute="trailing" constant="40" id="QHQ-bz-o9S"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="hvQ-Gd-pjA" secondAttribute="bottom" constant="20" id="YTg-rd-dB0"/>
+                <constraint firstItem="hvQ-Gd-pjA" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="40" id="dxP-zc-oA5"/>
+                <constraint firstItem="UNe-AM-wnz" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="sPJ-r7-uFY"/>
+                <constraint firstItem="hvQ-Gd-pjA" firstAttribute="top" secondItem="UNe-AM-wnz" secondAttribute="bottom" constant="75" id="so4-nq-PJf"/>
+            </constraints>
+            <point key="canvasLocation" x="-68.115942028985515" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

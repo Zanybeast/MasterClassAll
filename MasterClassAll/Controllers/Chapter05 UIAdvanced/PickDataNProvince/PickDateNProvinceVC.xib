@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickDateNProvinceVC">
+            <connections>
+                <outlet property="cityTextField" destination="gpk-jH-zdN" id="ehh-Q4-wWq"/>
+                <outlet property="dateTextField" destination="dyY-RB-Q4W" id="y49-TS-rZC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-RB-Q4W">
+                    <rect key="frame" x="120" y="97.5" width="234" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6T2-rN-dRo"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生日" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ON-fG-L4S">
+                    <rect key="frame" x="40" y="104" width="60" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="bZM-co-H91"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myp-30-m8M">
+                    <rect key="frame" x="40" y="185" width="60" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="GD4-hh-hJq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpk-jH-zdN">
+                    <rect key="frame" x="120" y="178.5" width="234" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="mtD-Rj-qjQ"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gpk-jH-zdN" firstAttribute="leading" secondItem="myp-30-m8M" secondAttribute="trailing" constant="20" id="35x-KR-grw"/>
+                <constraint firstItem="4ON-fG-L4S" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="6NO-2x-duj"/>
+                <constraint firstItem="dyY-RB-Q4W" firstAttribute="centerY" secondItem="4ON-fG-L4S" secondAttribute="centerY" id="HI5-6r-ovh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dyY-RB-Q4W" secondAttribute="trailing" constant="60" id="HhQ-7d-C6Z"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gpk-jH-zdN" secondAttribute="trailing" constant="60" id="eaX-Bc-ItF"/>
+                <constraint firstItem="dyY-RB-Q4W" firstAttribute="leading" secondItem="4ON-fG-L4S" secondAttribute="trailing" constant="20" id="n3P-g5-4Ns"/>
+                <constraint firstItem="4ON-fG-L4S" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="40" id="nO8-ix-sMT"/>
+                <constraint firstItem="myp-30-m8M" firstAttribute="centerX" secondItem="4ON-fG-L4S" secondAttribute="centerX" id="paZ-fR-eKo"/>
+                <constraint firstItem="gpk-jH-zdN" firstAttribute="centerY" secondItem="myp-30-m8M" secondAttribute="centerY" id="v8g-su-Plu"/>
+                <constraint firstItem="myp-30-m8M" firstAttribute="top" secondItem="4ON-fG-L4S" secondAttribute="bottom" constant="60" id="x9K-cZ-Yfc"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="67"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

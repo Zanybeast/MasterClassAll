@@ -8,6 +8,7 @@
 #import "SectionController.h"
 #import "TitleCell.h"
 
+
 @interface SectionController ()
 
 @end
@@ -62,7 +63,7 @@
 }
 
 - (UIViewController *)createControllerWithString: (NSString *)name {
-    NSLog(@"%@", name);
+    ZLog(@"%@", name);
     UIViewController* theClass = [[NSClassFromString(name) alloc] init];
     
     NSString *title;

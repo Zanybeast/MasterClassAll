@@ -1,0 +1,40 @@
+//
+//  PrefixHeader.pch
+//  MasterClassAll
+//
+//  Created by carl on 2020/11/26.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "NSString+Extension.h"
+#import "UIView+Extension.h"
+#import "NSArray+Extension.h"
+#import "UIColor+Extension.h"
+#import "NSUserDefaults+Extension.h"
+#import "ZFileUtil.h"
+
+#define ContactFileName @"ContactsList"
+//MARK: - DEBUG MACRO
+#ifdef DEBUG
+#define ZLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define ZLog(...)
+
+#endif
+
+#define PRINT_FUNCTION ZLog(@"%s", __func__)
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define NAV_BAR_HEIGHT self.navigationController.navigationBar.frame.size.height
+#define STATUS_BAR_HEIGHT self.view.window.windowScene.statusBarManager.statusBarFrame.size.height
+
+//MARK: - RANDOM NUMBERS OR CONSTANTS
+#define RANDOM_FLOAT_VAL ((arc4random_uniform(99) + 1) / 100.0)
+
+#endif /* PrefixHeader_pch */

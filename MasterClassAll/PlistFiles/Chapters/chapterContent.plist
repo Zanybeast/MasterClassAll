@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>CreateRandomTextVC</string>
+	</array>
+	<array>
+		<string>BaseUIAndScrollViewVC</string>
+		<string>SeperatePageVC</string>
+	</array>
+	<array>
+		<string>AutoLayoutAndTableViewVC</string>
+		<string>LolHeroInfoVC</string>
+		<string>DealsTableVC</string>
+		<string>VipStatusVC</string>
+		<string>TableViewWithEditingVC</string>
+		<string>ChatVC</string>
+		<string>OptimizedChatVC</string>
+		<string>HeaderFooterVC</string>
+	</array>
+	<array>
+		<string>EmptyWebViewVC</string>
+	</array>
+	<array>
+		<string>TransformVC</string>
+		<string>AvatarToRoundVC</string>
+		<string>ClockVC</string>
+		<string>HeartBeatVC</string>
+		<string>MoveImageAnimVC</string>
+		<string>FlipPageVC</string>
+		<string>TurnPlateVC</string>
+		<string>FoldImageVC</string>
+		<string>MusicBounceBarVC</string>
+		<string>CustomIndicatorVC</string>
+		<string>DrawDotLayerVC</string>
+		<string>InvertedImageVC</string>
+		<string>QQMessageHintBubbleVC</string>
+	</array>
+	<array>
+		<string>PickerViewDemoVC</string>
+		<string>PickFlagVC</string>
+		<string>PickDateNProvinceVC</string>
+		<string>LUIApplicationVC</string>
+		<string>ContactsVC</string>
+		<string>MoveAViewVC</string>
+		<string>GesturesVC</string>
+		<string>DrawerGestureVC</string>
+		<string>DrawVC</string>
+		<string>PaintBoardVC</string>
+	</array>
+</array>
+</plist>

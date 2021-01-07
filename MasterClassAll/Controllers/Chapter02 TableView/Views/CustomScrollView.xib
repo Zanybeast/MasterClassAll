@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomScrollView">
+            <rect key="frame" x="0.0" y="0.0" width="629" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-s9-cFx">
+                    <rect key="frame" x="0.0" y="0.0" width="629" height="200"/>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="v1t-G2-C7w">
+                    <rect key="frame" x="486" y="170" width="123" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="v9N-ze-edD"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="v1t-G2-C7w" secondAttribute="trailing" constant="20" id="6aw-e6-yf5"/>
+                <constraint firstAttribute="trailing" secondItem="3SL-s9-cFx" secondAttribute="trailing" id="NXP-te-owQ"/>
+                <constraint firstAttribute="bottom" secondItem="v1t-G2-C7w" secondAttribute="bottom" constant="20" id="c7f-CD-dSg"/>
+                <constraint firstItem="3SL-s9-cFx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yDe-B5-3pB"/>
+                <constraint firstAttribute="bottom" secondItem="3SL-s9-cFx" secondAttribute="bottom" id="yHD-t3-WCa"/>
+                <constraint firstItem="3SL-s9-cFx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="z6U-HD-lpd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="pageControl" destination="v1t-G2-C7w" id="UHk-87-5RN"/>
+                <outlet property="scrollView" destination="3SL-s9-cFx" id="171-is-L6x"/>
+            </connections>
+            <point key="canvasLocation" x="-194.92753623188406" y="-228.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
